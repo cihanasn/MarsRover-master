@@ -21,7 +21,7 @@ namespace MarsRover
         public Position position { get; set; }
         public DirectionType directionType { get; set; }
 
-        public abstract void ShowFinalCoordinate();
+        public abstract string ShowFinalCoordinate();
 
     }
 
@@ -29,12 +29,10 @@ namespace MarsRover
     {
 
 
-        public override void ShowFinalCoordinate()
+        public override string ShowFinalCoordinate()
         {
             //Rover
-            Console.WriteLine(" * ------ Rover Output ------ * ");
-            Console.WriteLine(position.x + " " + position.y + " " + (char)directionType);
-
+            return position.x + " " + position.y + " " + (char)directionType;
         }
 
     }
